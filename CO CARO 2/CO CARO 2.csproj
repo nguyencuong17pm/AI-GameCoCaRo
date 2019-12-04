@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1733C80C-A9C8-4682-A878-A5D123C721BB}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CO_CARO_2</RootNamespace>
+    <AssemblyName>CO CARO 2</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>
+    </ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="frmThôngTin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmThôngTin.Designer.cs">
+      <DependentUpon>frmThôngTin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="C_BanCo.cs" />
+    <Compile Include="C_DieuKhien.cs" />
+    <Compile Include="C_OCo.cs" />
+    <Compile Include="frmLuatChoi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLuatChoi.Designer.cs">
+      <DependentUpon>frmLuatChoi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmThôngTin.resx">
+      <DependentUpon>frmThôngTin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLuatChoi.resx">
+      <DependentUpon>frmLuatChoi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nen.jpg" />
+    <None Include="Resources\users32_31.png" />
+    <None Include="Resources\user32.png" />
+    <None Include="Resources\star32.png" />
+    <None Include="Resources\shutdown32.png" />
+    <None Include="Resources\users32_3.png" />
+    <None Include="Resources\arrow32.png" />
+    <None Include="Resources\addmanager32.png" />
+    <None Include="Resources\arrow321.png" />
+    <Content Include="Resources\d.jpg" />
+    <None Include="Resources\exit16.png" />
+    <None Include="Resources\help16.png" />
+    <None Include="Resources\help32.png" />
+    <None Include="Resources\help161.png" />
+    <Content Include="Resources\hinhnen.jpg" />
+    <None Include="Resources\dhag.PNG" />
+    <None Include="Resources\Đại_học_An_Giang_ở_Long_Xuyên1.jpg" />
+    <None Include="Resources\Đại_học_An_Giang_ở_Long_Xuyên.jpg" />
+    <None Include="HinhAnh\o.png" />
+    <None Include="HinhAnh\x.png" />
+    <Content Include="HinhAnh\hinhnen.jpg" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
